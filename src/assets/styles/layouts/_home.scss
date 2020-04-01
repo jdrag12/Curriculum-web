@@ -32,6 +32,10 @@ a {
   border: 1px solid $gray;
   box-shadow: 0 16px 26px 0 rgba(0, 0, 0, 0.1);
 
+  @media (max-width: 600px) {
+    padding: 30px 20px;
+  }
+
   .block__image {
     width: 100%;
     border-radius: 10px;
@@ -59,11 +63,15 @@ a {
   .block__title--big {
     color: $main-light;
     font-size: 36px;
+    @media (max-width: $mobile) {
+      font-size: 28px;
+    }
   }
 
   .block__content {
     line-height: 1.5;
     margin: 1em 0em;
+
     color: #454547;
   }
 
@@ -73,7 +81,7 @@ a {
     flex-direction: column;
     padding: 1em 0em;
     @media (max-width: 600px) {
-      margin: 1.5em;
+      margin: 1em 0em;
     }
     .block__badge {
       border-radius: 10px;
@@ -178,6 +186,9 @@ a {
         text-align: center;
         font-size: 36px;
         margin-right: 0em;
+        @media (max-width: $mobile) {
+          font-size: 28px;
+        }
       }
       .block__icon--link:hover {
         transform: scale(1.4);
@@ -188,6 +199,9 @@ a {
         font-size: 0.9em;
         margin-top: -0.4em;
         text-transform: uppercase;
+        @media (max-width: $mobile) {
+          display: none;
+        }
       }
     }
   }
