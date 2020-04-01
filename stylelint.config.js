@@ -1,16 +1,10 @@
 module.exports = {
   extends: "stylelint-config-standard",
-  plugins: ["stylelint-scss", "stylelint-selector-bem-pattern"],
+  plugins: ["stylelint-scss"],
   rules: {
     "selector-nested-pattern": "^&",
-    "plugin/selector-bem-pattern": {
-      componentName: "[A-Z]+",
-      componentSelectors: {
-        initial: "^\\.{componentName}(?:-[a-z]+)?$",
-        combined: "^\\.combined-{componentName}-[a-z]+$"
-      },
-      utilitySelectors: "^\\.util-[a-z]+$"
-    },
+    "selector-class-pattern":
+      "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
     "unit-whitelist": ["%", "px", "em", "deg"],
     indentation: 2,
     "no-descending-specificity": null,
