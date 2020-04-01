@@ -1,21 +1,194 @@
 body {
   margin: 0;
-  padding: 30px;
+  padding: 0;
   font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: #fff;
+  color: #454547;
+  box-sizing: border-box;
+  font-size: 15px;
 }
 
-.uoc-logo {
-  display: block;
-  margin-bottom: 20px;
-  max-width: 300px;
-  height: auto;
+a {
+  text-decoration: none;
+  color: $main-light;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.container {
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+  border: 1px solid $gray;
+  box-shadow: 0 16px 26px 0 rgba(0, 0, 0, 0.1);
+
+  .block__image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .block__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .block__icon {
+    color: #fff;
+    background-image: $gradient;
+    border-radius: 50%;
+    padding: 0.4em;
+    margin-right: 0.5em;
+  }
+
+  .block__title {
+    color: $black;
+    margin: 0.2em 0em;
+    font-size: 24px;
+  }
+
+  .block__title--big {
+    color: $main-light;
+    font-size: 36px;
+  }
+
+  .block__content {
+    line-height: 1.5;
+    margin: 1em 0em;
+    color: #454547;
+  }
+
+  .block__content--badges {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0em;
+    @media (max-width: 600px) {
+      margin: 1.5em;
+    }
+    .block__badge {
+      border-radius: 10px;
+      border: 1px solid $gray;
+      margin: 1em;
+      padding: 2em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+      box-shadow: 0 16px 26px 0 rgba(0, 0, 0, 0.05);
+
+      .block__title--badge {
+        font-size: 14px;
+        color: $gray-darker;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0em 0.5em;
+      }
+      .block__image--badge {
+        max-width: 64px;
+      }
+    }
+  }
+
+  .block__milestone {
+    margin: 1em 0em;
+  }
+  .block__milestoneheader {
+    display: flex;
+    font-weight: 700;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+
+    .block__milestoneheader__date {
+      font-size: 0.9em;
+      color: $gray-dark;
+    }
+    .block__milestoneheader__company {
+      margin-right: 0.5em;
+    }
+  }
+  .block__milestonedescription {
+    color: $gray-darker;
+  }
+
+  .block__content--timeline {
+    margin: 1em;
+    padding: 1em;
+    border-left: 5px solid $main-light;
+    display: flex;
+    flex-direction: column;
+    min-height: 4em;
+  }
+
+  .block__skilllist {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 350px;
+    padding: 0px;
+    margin: 2em;
+  }
+
+  .block__skill {
+    list-style: none;
+    margin-top: 2.5em;
+    font-size: 1em;
+  }
+}
+
+.block--nogrow {
+  height: 100%;
+  flex: 0 0 230px;
+  padding: 0px;
+  align-self: center;
+}
+
+.block--big {
+  flex: 2 1 300px;
+}
+
+.block--gradient {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+
+  .block__content--gradient {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    justify-content: space-around;
+    .block__linkcontainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .block__icon--link {
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        flex: 1;
+        background: transparent;
+        color: #fff;
+        text-align: center;
+        font-size: 36px;
+        margin-right: 0em;
+      }
+      .block__icon--link:hover {
+        transform: scale(1.4);
+      }
+      .block__title--link {
+        color: #fff;
+        text-align: center;
+        font-size: 0.9em;
+        margin-top: -0.4em;
+        text-transform: uppercase;
+      }
+    }
+  }
 }

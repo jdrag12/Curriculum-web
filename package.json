@@ -1,23 +1,24 @@
 {
-  "name": "uoc-boilerplate",
-  "version": "2.4.0",
+  "name": "joan-drago-curriculum",
+  "version": "1.0.0",
   "private": true,
-  "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "description": "Curriculum web de Joan Drago per la PAC-1 de l'assignatura Eines HTML i CSS 2 del màster Universitari de la UOC Desenvolupament d'aplicacions web",
   "scripts": {
     "parcel:dev": "parcel src/index.html -p 8123 --open",
     "parcel:build": "parcel build src/index.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader",
     "dev": "npm-run-all clean parcel:dev",
-    "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "build": "npm-run-all clean stylelint parcel:build",
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "stylelint": "stylelint src/**/*.scss"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Joan Drago",
+    "email": "jdrago10@gmail.com"
   },
   "license": "MIT",
   "bugs": {
@@ -34,7 +35,12 @@
     "postcss-clean": "^1.1.0",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^2.7.1",
-    "sass": "^1.25.0"
+    "sass": "^1.25.0",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.16.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "material-icons": "^0.3.1"
+  }
 }

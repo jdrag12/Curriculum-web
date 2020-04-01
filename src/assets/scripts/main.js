@@ -10,6 +10,8 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  console.log('Hello, UOC!');
-} )();
++(function() {
+  console.log("Hello, UOC!");
+})();
+
+console.log(2 + 2);
