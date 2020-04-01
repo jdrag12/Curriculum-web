@@ -41,6 +41,7 @@
     "stylelint-scss": "^3.16.0"
   },
   "dependencies": {
-    "material-icons": "^0.3.1"
+    "material-icons": "^0.3.1",
+    "stylelint-selector-bem-pattern": "^2.1.0"
   }
 }
