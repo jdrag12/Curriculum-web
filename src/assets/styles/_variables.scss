@@ -1,6 +1,5 @@
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$font-family-sans-serif: -apple-system, "Helvetica Neue", arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $main: #f49a31;
@@ -11,7 +10,6 @@ $gray-darker: darken($gray, 50%);
 $black: #454547;
 $yellow: rgb(246, 211, 101);
 $salmon: rgb(253, 160, 133);
-$gradient: linear-gradient(120deg, $yellow 0px, $salmon 100%);
 
 //DEVICES
 $mobile: 500px;
