@@ -10,7 +10,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $main-light;
+  color: $black-darker;
 }
 
 .container {
@@ -20,6 +20,10 @@ a {
   margin: 60px auto;
   display: flex;
   flex-wrap: wrap;
+}
+
+.container-flag {
+  justify-content: flex-end;
 }
 
 .block {
